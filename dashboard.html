@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Welcome</title>
+</head>
+<body class="h-screen">
+
+    <header class="flex justify-between items-center px-5 md:px-14 lg:px-28 py-4">
+        <div class="brand w-10 h-10 flex justify-center items-center border-2 border-stone-100 font-semibold text-purple-800 rounded-full">
+            brand
+        </div>
+        <div class="font-semibold text-fuchsia-600"><a href="./login.html">Log Out</a></div>
+    </header>
+
+    <main>
+        <div class="form-container mx-auto px-4 sm:px-8 py-8 rounded-xl mt-0 sm:mt-2">
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              btnColor: "#5266EB",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Log In</title>
+</head>
+<body class="h-screen">
+
+    <header class="px-5 md:px-14 lg:px-28 py-4">
+        <div class="brand w-10 h-10 flex justify-center items-center border-2 border-stone-100 font-semibold text-purple-800 rounded-full">
+            brand
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container mx-auto px-4 sm:px-8 py-8 rounded-xl mt-0 sm:mt-2">
+            <h2 class="text-center text-2xl mb-8 font-bold">LOG IN</h2>
+            <div class="login-error relative bg-pink-100 text-xs px-5 pt-5 pb-3 mb-3 hidden">
+              <span class="close-btn absolute text-lg top-0 right-3 cursor-pointer">x</span>
+              <p class="login-error-msg"></p>
+            </div>
+            <form action="./login.html" class="grid gap-4">
+                
+                <div class="flex flex-col">
+                    <label for="email" class="text-xs text-slate-500 mb-1 ps-0.5">Email address</label>
+                    <input type="email" name="email" id="email" class="rounded-md text-xs" placeholder="email@example.com">
+                </div>
+    
+                <div class="flex flex-col">
+                    <label for="password" class="text-xs text-slate-500 mb-1 ps-0.5">Password</label>
+                    <input type="password" name="password" id="password" class="rounded-md text-xs" placeholder="Enter password">
+                </div>
+    
+                <button id="login" class="text-sm rounded-md py-1.5 mt-4 bg-purple-400 hover:bg-purple-500 text-white">Submit</button>
+            </form>
+            <br>
+            <p class="text-center switch-message">Don't have an account? <a href="./index.html" class="font-medium text-sky-600">Sign Up</a></p>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              btnColor: "#5266EB",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./login.js"></script>
+  </body>
+</html>
