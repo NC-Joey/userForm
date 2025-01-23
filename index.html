@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Sign Up</title>
   </head>
@@ -17,7 +18,7 @@
     </header>
 
     <main class="main-body">
-        <div class="form-container mx-auto px-4 sm:px-8 py-8 rounded-xl mt-0 sm:mt-2">
+        <div data-aos="zoom-in" data-aos-duration="1000" class="form-container mx-auto px-4 sm:px-8 py-8 rounded-xl mt-0 sm:mt-2">
             <h2 class="text-center text-2xl mb-8 font-bold">REGISTER</h2>
             <form method="get" class="grid gap-4">
                 <div class="grid-cols-2 grid gap-3">
@@ -84,6 +85,11 @@
         },
       };
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./signup.js"></script>
   </body>
 </html>

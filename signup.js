@@ -44,16 +44,32 @@ const checkData = (event) => {
     localStorage.setItem("users", JSON.stringify(users))
     console.log(users)
 
-    main.classList.add("mid-screen")
+    Swal.fire({
+        icon: "success",
+        text: "Your account has been created. You'll be directed to the login page.",
+        timer: 3000,
+        timerProgressBar: true
+    })
+    .then(result => {
+        if (result.isConfirmed) {
+            window.location.href = "./login.html"
+        }
+    })
 
-    setTimeout(function () {
-        container.innerHTML = `<div class="justify-center items-center text-center">
-                <div>
-                    <img src="./assets/images/green-check.png" alt="success" class="w-1/6 mx-auto">
-                </div>
-                <p>Your account has been created. Please proceed to login <a href="./login.html" class="font-medium text-sky-600">here.</a></p>
-            </div>`
-    }, 500)
+    setTimeout(function() {
+        window.location.href = "./login.html"
+    }, 2900)
+
+    // main.classList.add("mid-screen")
+
+    // setTimeout(function () {
+    //     container.innerHTML = `<div class="justify-center items-center text-center">
+    //             <div>
+    //                 <img src="./assets/images/green-check.png" alt="success" class="w-1/6 mx-auto">
+    //             </div>
+    //             <p>Your account has been created. Please proceed to login <a href="./login.html" class="font-medium text-sky-600">here.</a></p>
+    //         </div>`
+    // }, 500)
     
     
 }

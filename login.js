@@ -19,20 +19,32 @@ const confirmLogin = (event) => {
         const matchUser = users.filter(data => data.email === emailAddress && data.password === pass)
         
         if (matchUser.length == 1) {
-            console.log(matchUser)
 
             localStorage.setItem("loggedUser", matchUser[0].fullname);
 
-            container.innerHTML = `<div class="justify-center items-center text-center">
-                        <div>
-                            <img src="./assets/images/green-check.png" alt="success" class="w-1/6 mx-auto">
-                        </div>
-                        <p>You've been successfully logged in. Please hold on.</p>
-                    </div>`
+            // container.innerHTML = `<div class="justify-center items-center text-center">
+            //             <div>
+            //                 <img src="./assets/images/green-check.png" alt="success" class="w-1/6 mx-auto">
+            //             </div>
+            //             <p>You've been successfully logged in. Please hold on.</p>
+            //         </div>`
+            
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                });
+            Toast.fire({
+                icon: "success",
+                title: "Signed in successfully"
+            });
 
             setTimeout(function () {
                 window.location.href = "./dashboard.html"
-            }, 2000)
+            }, 3000)
+
             
         } else {
             errorMsg.textContent = "Email and password don't match, please try again"
